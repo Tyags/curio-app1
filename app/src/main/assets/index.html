@@ -314,7 +314,7 @@ const DAY_MS = 864e5;
 function ageDays(d){ const a=Date.parse(today+"T00:00:00"), b=Date.parse(d+"T00:00:00"); return isNaN(b)? 999 : Math.round((a-b)/DAY_MS); }
 function isEvergreen(c){ return c.evergreen!=null ? !!c.evergreen : c.kind!=="news"; }
 function stillRelevant(c){ return isEvergreen(c) || ageDays(c.date)<=10; }
-const FEED_BASE = (window.CurioAndroid && CurioAndroid.feedBase()) || "__FEED_BASE__";
+const FEED_BASE = (window.CurioAndroid && CurioAndroid.feedBase()) || "https://raw.githubusercontent.com/Tyags/curio-app1/main/feed/";
 function imgSrc(c){
   const im=c&&c.image; if(!im) return "";
   if(typeof im.id==="string" && /^[0-9a-f]{32}$/.test(im.id)) return "/_blob/"+im.id;

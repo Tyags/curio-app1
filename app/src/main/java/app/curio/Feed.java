@@ -19,7 +19,7 @@ import java.util.Locale;
 
 /** Downloads and caches the public card feed published by the daily task. */
 final class Feed {
-    static final String BASE = "__FEED_BASE__";
+    static final String BASE = "https://raw.githubusercontent.com/Tyags/curio-app1/main/feed/";
     private static final String CACHE = "feed.json";
 
     private Feed() { }
